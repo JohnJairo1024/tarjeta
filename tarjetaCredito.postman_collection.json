@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "8a4087e0-6ed9-49b6-bbd8-5a57099aca18",
+		"name": "tarjetaCredito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "healt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYwNzA0OTI0MSwiaWF0IjoxNjA3MDEzMjQxfQ.yI-Myfhuaki0OQeua57RDgUlOb1LIGr_7-ywrEBd1s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"user1\",\r\n  \"password\": \"pwd1\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/clientes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYwNzA1MjY5MiwiaWF0IjoxNjA3MDE2NjkyfQ.zIaTCoLHdrqrcMMto4zf7vxqztdVmIS_x3ojtgOBKnI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/clientes(ID)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYwNzA1MjY5MiwiaWF0IjoxNjA3MDE2NjkyfQ.zIaTCoLHdrqrcMMto4zf7vxqztdVmIS_x3ojtgOBKnI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-tarjeta.herokuapp.com/api/cliente/1",
+					"protocol": "https",
+					"host": [
+						"api-tarjeta",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"cliente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/clientes(Name)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTYwNzA1MjY5MiwiaWF0IjoxNjA3MDE2NjkyfQ.zIaTCoLHdrqrcMMto4zf7vxqztdVmIS_x3ojtgOBKnI",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api-tarjeta.herokuapp.com/api/cliente?name=john",
+					"protocol": "https",
+					"host": [
+						"api-tarjeta",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"cliente"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "john"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
