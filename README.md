@@ -116,3 +116,18 @@ El endpoint expuesto para saber el estado de la API es GET / `/health`.
     }
 ]
 ```
+
+### Acces Denied
+![imagen1](https://user-images.githubusercontent.com/17706660/101078870-bbe8b280-3574-11eb-8a2a-92c514512fbc.png)
+
+### Postman
+### PostgreSQL Heroku Clientes
+![imagen2](https://user-images.githubusercontent.com/17706660/101078883-c2772a00-3574-11eb-8d98-c3938ec3ac00.png)
+
+### PostgreSQL Heroku Clientes
+![imagen3](https://user-images.githubusercontent.com/17706660/101078888-c440ed80-3574-11eb-9cbe-5a6ed3aa327b.png)
+
+### PostgreSQL Heroku User
+![imagen4](https://user-images.githubusercontent.com/17706660/101078897-c5721a80-3574-11eb-9ccd-daf3415e35cc.png)
+
+
