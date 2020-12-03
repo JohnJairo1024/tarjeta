@@ -1,0 +1,26 @@
+# Spring Boot configuration
+spring:
+  profiles:
+    active: development
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: postgres://ymfuazffymrmpl:c6eb0f801829546124f09b1de7fc73c2fd320feb63fedb2e4b14cccf9fcd5e84@ec2-3-231-48-230.compute-1.amazonaws.com:5432/dd0psj6gll4k68
+    username: ymfuazffymrmpl
+    password: c6eb0f801829546124f09b1de7fc73c2fd320feb63fedb2e4b14cccf9fcd5e84
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: false
+# Logger configuration
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%8.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %X{REQUEST_ID} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+  level:
+    org.springframework: INFO
+    org.hibernate: DEBUG
