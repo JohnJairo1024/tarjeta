@@ -20,7 +20,7 @@ public class JwtController {
 
     @GetMapping("/")
     public String welcome() {
-        return "Welcome to javatechie !!";
+        return "Bienvenido!!";
     }
 
     @PostMapping("/authenticate")
