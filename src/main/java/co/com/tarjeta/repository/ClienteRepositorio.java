@@ -9,13 +9,10 @@ import java.util.List;
 @Repository
 public interface ClienteRepositorio extends JpaRepository<ClienteEntidad, Long> {
 
-
-
     List<ClienteEntidad> getClienteEntidadBy();
 
     ClienteEntidad getClienteEntidadByIdCliente(Long id);
 
     ClienteEntidad getClienteEntidadByNombresCliente(String name);
-
 
 }

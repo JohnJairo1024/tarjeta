@@ -2,9 +2,9 @@ package co.com.tarjeta.service.impl;
 
 import co.com.tarjeta.config.OrikaMapper;
 import co.com.tarjeta.dto.ClienteDTO;
-import co.com.tarjeta.service.ClienteService;
 import co.com.tarjeta.entity.ClienteEntidad;
 import co.com.tarjeta.repository.ClienteRepositorio;
+import co.com.tarjeta.service.ClienteService;
 import ma.glasnost.orika.MapperFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

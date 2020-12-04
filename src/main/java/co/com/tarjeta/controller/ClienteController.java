@@ -28,7 +28,7 @@ public class ClienteController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/cliente/{id}")
-    public ClienteDTO getProductById(@PathVariable(value = "id", required = true) long id) {
+    public ClienteDTO getProductById(@PathVariable(value = "id") long id) {
         ClienteDTO response = service.getClienteById(id);
         return response;
     }

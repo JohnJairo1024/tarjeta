@@ -1,9 +1,9 @@
 package co.com.tarjeta;
 
+import co.com.tarjeta.entity.ClienteEntidad;
 import co.com.tarjeta.entity.ProductEntity;
 import co.com.tarjeta.entity.TarjetaCreditoEntidad;
 import co.com.tarjeta.entity.UserEntity;
-import co.com.tarjeta.entity.ClienteEntidad;
 import co.com.tarjeta.repository.ProductRepositorio;
 import co.com.tarjeta.repository.TarjetaCreditoRepositorio;
 import co.com.tarjeta.repository.UserRepositorio;
