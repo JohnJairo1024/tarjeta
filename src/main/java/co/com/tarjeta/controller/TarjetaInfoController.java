@@ -1,9 +1,7 @@
 package co.com.tarjeta.controller;
 
-import co.com.tarjeta.dto.ClienteDTO;
 import co.com.tarjeta.dto.TarjetaCreditoDTO;
 import co.com.tarjeta.service.TarjetaInfoService;
-import co.com.tarjeta.service.impl.ClienteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -42,4 +40,5 @@ public class TarjetaInfoController {
         TarjetaCreditoDTO response = service.getTarjetaInfoByName(name);
         return response;
     }
+
 }

@@ -1,10 +1,8 @@
 package co.com.tarjeta;
 
 import co.com.tarjeta.entity.ClienteEntidad;
-import co.com.tarjeta.entity.ProductEntity;
 import co.com.tarjeta.entity.TarjetaCreditoEntidad;
 import co.com.tarjeta.entity.UserEntity;
-import co.com.tarjeta.repository.ProductRepositorio;
 import co.com.tarjeta.repository.TarjetaCreditoRepositorio;
 import co.com.tarjeta.repository.UserRepositorio;
 import org.springframework.beans.factory.InitializingBean;
@@ -24,8 +22,7 @@ import java.util.stream.Stream;
 @EnableFeignClients
 public class DemoApplication {
 
-    @Autowired
-    private ProductRepositorio productRepository;
+
     @Autowired
     private TarjetaCreditoRepositorio tarjetaCreditoRepositorio;
     @Autowired
@@ -40,8 +37,6 @@ public class DemoApplication {
     InitializingBean sendDatabase() {
         return () -> {
 
-            productRepository.save(new ProductEntity("Computador", "Gamer Acer Nitro", 20000));
-            productRepository.save(new ProductEntity("Teclado", "Logitech Mk235", 30000));
             String uuid = UUID.randomUUID().toString();
             tarjetaCreditoRepositorio.save(new TarjetaCreditoEntidad("VISA", uuid, new Date(), "2020", "123", new ClienteEntidad("John", "Ochoa", "4601179", "CRA..", "TRANSV.", "Bogota", "La Estancia", "Colombia", new Date())));
             tarjetaCreditoRepositorio.save(new TarjetaCreditoEntidad("MASTERCARD", uuid, new Date(), "2022", "123", new ClienteEntidad("Jairo", "Mesa", "4601180", "CALLE...", "AV..", "Medellin", "Poblado", "Colombia", new Date())));

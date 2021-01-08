@@ -17,7 +17,7 @@ import static springfox.documentation.builders.PathSelectors.regex;
 public class SwaggerConfiguration {
 
     @Bean
-    public Docket productApi() {
+    public Docket tarjetaApi() {
         return new Docket(DocumentationType.SWAGGER_2).select()
                 .apis(RequestHandlerSelectors.basePackage("co.com.tarjeta"))
                 .apis(RequestHandlerSelectors.any())
@@ -32,7 +32,7 @@ public class SwaggerConfiguration {
 
         return new ApiInfoBuilder()
                 .title(" Services ")
-                .description(" Pega Application, to get products. ")
+                .description(" Pega Application, to get client. ")
                 .build();
     }
 }

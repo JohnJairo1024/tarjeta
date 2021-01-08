@@ -3,6 +3,7 @@ package co.com.tarjeta.controller;
 import co.com.tarjeta.dto.AuthRequest;
 import co.com.tarjeta.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,20 +20,20 @@ public class JwtController {
     private AuthenticationManager authenticationManager;
 
     @GetMapping("/")
-    public String welcome() {
-        return "Bienvenido!!";
+    public ResponseEntity welcome() {
+        return ResponseEntity.ok("Bienvenido!!");
     }
 
     @PostMapping("/authenticate")
-    public String generateToken(@RequestBody AuthRequest authRequest) throws Exception {
+    public ResponseEntity generateToken(@RequestBody AuthRequest authRequest) throws Exception {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getUserName(), authRequest.getPassword())
             );
         } catch (Exception ex) {
-            throw new Exception("inavalid username/password");
+            throw new Exception("username/password no son correctos");
         }
-        return jwtUtil.generateToken(authRequest.getUserName());
+        return ResponseEntity.ok(jwtUtil.generateToken(authRequest.getUserName()));
     }
 
 }

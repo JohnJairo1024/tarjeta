@@ -21,14 +21,14 @@ public class ClienteController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/clientes")
-    public List<ClienteDTO> getProducts() {
+    public List<ClienteDTO> getClientes() {
         List<ClienteDTO> response = service.getCliente();
         return response;
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/cliente/{id}")
-    public ClienteDTO getProductById(@PathVariable(value = "id") long id) {
+    public ClienteDTO getClienteById(@PathVariable(value = "id") long id) {
         ClienteDTO response = service.getClienteById(id);
         return response;
     }
@@ -36,7 +36,7 @@ public class ClienteController {
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/cliente")
     @ResponseBody
-    public ClienteDTO getProductByName(@RequestParam String name) {
+    public ClienteDTO getClienteByName(@RequestParam String name) {
         ClienteDTO response = service.getClienteByName(name);
         return response;
     }

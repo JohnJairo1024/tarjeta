@@ -1,1 +1,0 @@
---INSERT INTO PRODUCTS (NAME, BRAND, QUANTITY ) VALUES ('Pablo', 'Mendez', 2);
